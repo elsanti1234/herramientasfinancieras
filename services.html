@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Herramientas Financieras - Página 3</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet" />
+    <link href="css/all.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/templatemo-new-vision.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Page Header -->
+    <div class="container-fluid">
+        <div class="tm-site-header">
+            <div class="row">
+                <div class="col-12 tm-site-header-col">
+                    <div class="tm-site-header-left">
+                        <i class="fas fa-2x fa-calculator tm-site-icon"></i>
+                        <h1 class="tm-site-name">Herramientas Financieras</h1>
+                    </div>
+                    <div class="tm-site-header-right tm-menu-container-outer">
+                        <!-- Navbar -->
+                        <nav class="navbar navbar-expand-lg">
+                          <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+                            aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+                                class="fas fa-bars fa-1x"></i></span></button>
+                          <div class="collapse navbar-collapse tm-nav" id="navbarSupportedContent1">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                  <a class="nav-link tm-nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link tm-nav-link" href="company.html">Nuestra empresa</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link tm-nav-link" href="services.html">Servicio</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link tm-nav-link" href="contact.html">Contacto</a>
+                                </li>
+                              </ul>
+                          </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-12">
+                <div class="tm-main-bg tm-services-bg"></div>        
+            </div>
+        </div>
+        
+        <!-- Main -->
+        <main>
+            <!-- Welcome section -->
+            <section class="tm-welcome">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="tm-section-header tm-header-floating">Nuestras Herramientas Financieras</h2>         
+                    </div>
+                </div>
+                
+                <div class="row tm-welcome-row tm-services">
+                    <!-- Calculadora de Presupuestos -->
+                    <div class="col-md-3 col-sm-6">
+                        <figure class="tm-services-img">
+                            <img src="img/company11.jpg" alt="Calculadora de Presupuestos" class="img-fluid">        
+                            <figcaption class="tm-service-description">Calculadora de Presupuestos</figcaption>
+                            <input type="number" id="ingresos" placeholder="Ingresos">
+                            <input type="number" id="gastos" placeholder="Gastos">
+                            <button onclick="calcularPresupuesto()">Calcular Presupuesto</button>
+                            <p id="resultadoPresupuesto"></p>
+                        </figure>
+                    </div>
+
+                    <!-- Simulador de Ahorro -->
+                    <div class="col-md-3 col-sm-6">
+                        <figure class="tm-services-img">
+                            <img src="img/company12.jpg" alt="Simulador de Ahorro" class="img-fluid">        
+                            <figcaption class="tm-service-description">Simulador de Ahorro</figcaption>
+                            <input type="number" id="contribucionMensual" placeholder="Contribución Mensual">
+                            <input type="number" id="tasaInteres" placeholder="Tasa de Interés (%)">
+                            <input type="number" id="mesesAhorro" placeholder="Meses">
+                            <button onclick="calcularAhorro()">Calcular Ahorro</button>
+                            <p id="resultadoAhorro"></p>
+                        </figure>
+                    </div>
+
+                    <!-- Herramientas de Inversión -->
+                    <div class="col-md-3 col-sm-6">
+                        <figure class="tm-services-img">
+                            <img src="img/company13.jpg" alt="Herramientas de Inversión" class="img-fluid">    
+                            <figcaption class="tm-service-description">Herramientas de Inversión</figcaption>
+                            <input type="number" id="inversionInicial" placeholder="Inversión Inicial">
+                            <input type="number" id="tasaInversion" placeholder="Tasa de Interés (%)">
+                            <input type="number" id="periodosInversion" placeholder="Años">
+                            <button onclick="calcularInversion()">Calcular Inversión</button>
+                            <p id="resultadoInversion"></p>
+                        </figure>
+                    </div>
+
+                    <!-- Gestión de Deudas -->
+                    <div class="col-md-3 col-sm-6">
+                        <figure class="tm-services-img">
+                            <img src="img/company14.jpg" alt="Gestión de Deudas" class="img-fluid">    
+                            <figcaption class="tm-service-description">Gestión de Deudas</figcaption>
+                            <input type="number" id="deuda" placeholder="Monto de la Deuda">
+                            <input type="number" id="tasaDeuda" placeholder="Tasa de Interés (%)">
+                            <input type="number" id="plazoDeuda" placeholder="Meses">
+                            <button onclick="calcularDeuda()">Calcular Pago Mensual</button>
+                            <p id="resultadoDeuda"></p>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                Copyright &copy; 2024 Herramientas Financieras - Diseño: <a rel="nofollow" href="https://templatemo.com">TemplateMo</a>
+            </footer>
+        </main>
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/templatemo-script.js"></script>
+
+    <!-- JavaScript para las herramientas financieras -->
+    <script>
+        // Calculadora de Presupuesto
+        function calcularPresupuesto() {
+            const ingresos = parseFloat(document.getElementById("ingresos").value) || 0;
+            const gastos = parseFloat(document.getElementById("gastos").value) || 0;
+            const balance = ingresos - gastos;
+            document.getElementById("resultadoPresupuesto").innerText = `Balance: $${balance.toFixed(2)}`;
+        }
+
+        // Simulador de Ahorro
+        function calcularAhorro() {
+            const contribucionMensual = parseFloat(document.getElementById("contribucionMensual").value) || 0;
+            const tasaInteres = parseFloat(document.getElementById("tasaInteres").value) / 100 || 0;
+            const meses = parseInt(document.getElementById("mesesAhorro").value) || 0;
+            const ahorroTotal = contribucionMensual * ((Math.pow(1 + tasaInteres, meses) - 1) / tasaInteres);
+            document.getElementById("resultadoAhorro").innerText = `Ahorro Total: $${ahorroTotal.toFixed(2)}`;
+        }
+
+        // Herramientas de Inversión
+        function calcularInversion() {
+            const inversionInicial = parseFloat(document.getElementById("inversionInicial").value) || 0;
+            const tasa = parseFloat(document.getElementById("tasaInversion").value) / 100 || 0;
+            const periodos = parseInt(document.getElementById("periodosInversion").value) || 0;
+            const montoFinal = inversionInicial * Math.pow(1 + tasa, periodos);
+            document.getElementById("resultadoInversion").innerText = `Monto Final: $${montoFinal.toFixed(2)}`;
+        }
+
+        // Gestión de Deudas
+        function calcularDeuda() {
+            const deuda = parseFloat(document.getElementById("deuda").value) || 0;
+            const tasa = parseFloat(document.getElementById("tasaDeuda").value) / 100 / 12 || 0;
+            const plazo = parseInt(document.getElementById("plazoDeuda").value) || 0;
+            const pagoMensual = deuda * tasa / (1 - Math.pow(1 + tasa, -plazo));
+            document.getElementById("resultadoDeuda").innerText = `Pago Mensual: $${pagoMensual.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
